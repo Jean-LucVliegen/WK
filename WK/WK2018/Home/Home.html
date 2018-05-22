@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="Home.css">
+</head>
+<body>
+
+    <a href="../Ploegen/Ploegen.html"> <img class="Stadion" src="ploegen.jpg"></a>
+    <a href="../Stadion/Stadion.html"> <img class="Stadion" src="stadion2.jpg"></a>
+    <a href="../Opstelling/Opstelling.html"> <img class="Stadion" src="Opstelling.jpeg"></a>
+    <a href="../Simulatie/Simulatie.html"> <img class="Stadion" src="Simulatie.jpg"></a>
+
+<div class="Homepage">
+    <a href="../Ploegen/Ploegen.html"><h1 style="margin-left: 170px">Ploegen</h1>></a>
+    <a href="../Stadion/Stadion.html"><h1 style="margin-left: 330px">Stadions</h1></a>
+    <a href="../Opstelling/Opstelling.html"><h1 style="margin-left: 300px">Opstelling</h1></a>
+    <a href="../Simulatie/Simulatie.html"><h1 style="margin-left: 350px">Simulatie</h1></a>
+</div>
+
+    <header>
+        <a href="Home.html"> <img class="LogoWK" src="logo_wk_2018.png"></a>
+    </header>
+
+
+    <div class="divClock">
+        <p class="tekstBijClock">OpeningsWedstrijd</p>
+        <p class="clock" id="demo"><br></p>
+    </div>
+
+
+    <script>
+        var countDownDate = new Date("Jun 14, 2018 17:00:00").getTime();
+
+        var x = setInterval(function() {
+
+            var now = new Date().getTime();
+
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

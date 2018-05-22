@@ -1,0 +1,25 @@
+body {
+    margin: 0px;
+    background-color: black;
+
+}
+
+script {
+    visibility: visible;
+}
+
+.LogoWK {
+    width: 320px;
+    height: 80px;
+    text-align: center;
+    border-radius: 20px;
+    border-width: 20px;
+    border-color: white;
+    border-style: solid;
+    border-bottom: none;
+    border-top: none;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    position: relative;
+    margin-left: 775px;
+}

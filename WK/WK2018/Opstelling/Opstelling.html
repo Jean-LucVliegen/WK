@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Opstelling</title>
+    <link rel="stylesheet" href="Opstelling.css"/>
+</head>
+<body>
+<header>
+    <a href="../Home/Home.html"> <img class="LogoWK" src="../Home/logo_wk_2018.png"></a>
+</header>
+
+<div>
+    <img src="Red%20Devinls.jpg" style="width: 435px">
+    <img id="alderweireld" draggable="true" src="alderweireld.jpg" ondragstart="drag(event)">
+    <img id="batshuayi" draggable="true" src="batshuayi.jpg" ondragstart="drag(event)">
+    <img id="carrasco" draggable="true" src="carrasco.jpg" ondragstart="drag(event)">
+    <br>
+    <img id="ciman" draggable="true" src="ciman.jpg" ondragstart="drag(event)">
+    <img id="courtois" draggable="true" src="courtois.jpg" ondragstart="drag(event)">
+    <img id="debruyne true" src="debruyne.jpg" ondragstart="drag(event)">
+    <img id="dembele" draggable="true" src="dembele.jpg" ondragstart="drag(event)">
+    <img id="fellaini" draggable="true" src="fellaini.jpg" ondragstart="drag(event)">
+    <img id="hazard" draggable="true" src="hazard.jpg" ondragstart="drag(event)">
+    <br>
+    <img id="kompany" draggable="true" src="kompany.jpg" ondragstart="drag(event)">
+    <img id="lukaku" draggable="true" src="lukaku.jpg" ondragstart="drag(event)">
+    <img id="mertens" draggable="true" src="mertens.jpg" ondragstart="drag(event)">
+    <img id="meunier" draggable="true" src="meunier.jpg" ondragstart="drag(event)">
+    <img id="mignolet" draggable="true" src="mignolet.jpg" ondragstart="drag(event)">
+    <img id="mirallas" draggable="true" src="mirallas.jpg" ondragstart="drag(event)">
+    <br>
+    <img id="naingolan" draggable="true" src="naingolan.jpg" ondragstart="drag(event)">
+    <img id="origi" draggable="true" src="origi.jpg" ondragstart="drag(event)">
+    <img id="tielemans" draggable="true" src="tielemans.jpg" ondragstart="drag(event)">
+    <img id="vermaelen" draggable="true" src="vermaelen.jpg" ondragstart="drag(event)">
+    <img id="vertonghen" draggable="true" src="vertonghen.jpg" ondragstart="drag(event)">
+    <img id="witsel" draggable="true" src="witsel.jpg" ondragstart="drag(event)">
+</div>
+
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("img", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            let data = ev.dataTransfer.getData("img");
+            ev.target.appendChild(document.getElementById(data));
+        }
+
+    </script>
+
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+
+    <img class="veld" src="Opstelling1.jpeg" ondrop="drop(event)" dropzone="link" ondragover="allowDrop(event)">
+
+</body>
+</html>

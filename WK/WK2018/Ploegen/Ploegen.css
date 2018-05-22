@@ -1,0 +1,47 @@
+body {
+    margin: 0px;
+    background-color: white;
+}
+
+.LogoWK {
+    width: 320px;
+    height: 80px;
+    text-align: center;
+    border-radius: 20px;
+    border-width: 20px;
+    border-color: white;
+    border-style: solid;
+    border-bottom: none;
+    border-top: none;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    position: relative;
+    margin-left: 775px;
+}
+
+.klass1 {
+    margin-left: 100px;
+    margin-right: 1300px;
+    border: 2px solid black;
+    height: 150px;
+}
+
+input {
+    margin-top: 10px;
+    display: inline-block;
+    float: left;
+}
+
+label {
+    font-weight: bold;
+    font-family: Elephant;
+    margin-left: 50px;
+    margin-top: 10px;
+    display: inline-block;
+    width: 115px;
+    float: left;
+}
+
+.button {
+    margin-left: 50px;
+}

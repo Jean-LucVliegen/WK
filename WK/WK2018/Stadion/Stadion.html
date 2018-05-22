@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stadion</title>
+    <link rel="stylesheet" href="Stadion.css">
+    <link rel="script" href="stadions.js">
+</head>
+<body>
+<header>
+    <a href="../Home/Home.html"> <img class="LogoWK" src="../Home/logo_wk_2018.png"></a>
+</header>
+
+<div id="googleMap" style="width: 100%; height: 400px;"></div>
+
+<script>
+    function myMap() {
+        let mapOptions = {
+            center: new google.maps.MapTypeId.HYBRID
+        }
+        let map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+    }
+</script>
+<script
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap">
+</script>
+
+</body>
+</html>
