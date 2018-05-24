@@ -1,18 +1,19 @@
 body {
     margin: 0px;
     background-color: black;
+    height: 100%;
 }
 
 
 .Stadion {
     width: 25%;
-    height: 970px;
+    height: 100%;
     margin: 0px;
     float: left;
     -webkit-filter: grayscale(75%);
     filter: grayscale(75%);
     position: absolute;
-    }
+}
 
 h1 {
     float: left;
@@ -28,15 +29,15 @@ h1 {
     filter: grayscale(0%);
 }
 
-.Homepage {
-    float: left;
-    margin-top: -800px;
 
-}
+
+
 
 header {
     position: absolute;
     text-align: center;
+    width: 30%;
+    margin-left: 35%;
 }
 
 .LogoWK {
@@ -52,7 +53,7 @@ header {
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     position: relative;
-    margin-left: 775px;
+
 }
 
 .clock {
@@ -80,7 +81,7 @@ header {
     border: white;
     border: solid;
     border-width: 1px;
-    width: 400px;
+    width: 30%;
     height: 70px;
     text-align: center;
     /*margin-left: auto;/*
@@ -88,7 +89,7 @@ header {
     /*margin-top: 560px;*/
     position: absolute;
     bottom: 5px;
-    margin-left: 775px;
+    margin-left: 35%;
 }
 
 .p1 {
@@ -104,6 +105,10 @@ header {
 .link {
     float: left;
     width: 25%;
-    height: 970px;
     margin: 0px;
+    height: 100%;
+}
+
+html {
+    height: 100%;
 }

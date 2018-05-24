@@ -8,6 +8,12 @@ script {
     visibility: visible;
 }
 
+header{
+    position: absolute;
+    text-align: center;
+    width: 30%;
+    margin-left: 35%;
+}
 .LogoWK {
     width: 320px;
     height: 80px;
@@ -21,5 +27,5 @@ script {
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     position: relative;
-    margin-left: 775px;
+
 }

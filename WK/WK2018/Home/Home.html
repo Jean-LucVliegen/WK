@@ -6,55 +6,57 @@
     <link rel="stylesheet" href="Home.css">
 </head>
 <body>
-<div>
-    <div>
-        <a href="../Ploegen/Ploegen.html"> <img class="Stadion" src="ploegen.jpg"></a>
-    </div>
-    <div>
-        <a href="../Stadion/Stadion.html"> <img class="Stadion" src="stadion2.jpg"></a>
-    </div>
-    <div>
-        <a href="../Opstelling/Opstelling.html"> <img class="Stadion" src="Opstelling.jpeg"></a>
-    </div>
-    <div>
-        <a href="../Simulatie/Simulatie.html"> <img class="Stadion" src="Simulatie.jpg"></a>
-    </div>
+<div class="link">
+    <a href="../Ploegen/Ploegen.html"> <img class="Stadion" src="ploegen.jpg"></a>
+    <p class="p1">Ploegen</p>
+</div>
+<div class="link">
+    <a href="../Stadion/Stadion.html"> <img class="Stadion" src="stadion2.jpg"></a>
+    <p class="p1">Stadion</p>
+</div>
+<div class="link">
+    <a href="../Opstelling/Opstelling.html"> <img class="Stadion" src="Opstelling.jpeg"></a>
+    <p class="p1">Opstelling</p>
+</div>
+<div class="link">
+    <a href="../Simulatie/Simulatie.html"> <img class="Stadion" src="Simulatie.jpg"></a>
+    <p class="p1">Simulaite</p>
+</div>
 
 
-
-    <header>
-        <a href="Home.html"> <img class="LogoWK" src="logo_wk_2018.png"></a>
-    </header>
-
-
-    <div class="divClock">
-        <p class="tekstBijClock">OpeningsWedstrijd</p>
-        <p class="clock" id="demo"><br></p>
-    </div>
+<header>
+    <a href="Home.html"> <img class="LogoWK" src="logo_wk_2018.png"></a>
+</header>
 
 
-    <script>
-        var countDownDate = new Date("Jun 14, 2018 17:00:00").getTime();
+<div class="divClock">
+    <p class="tekstBijClock">OpeningsWedstrijd</p>
+    <p class="clock" id="demo"><br></p>
+</div>
 
-        var x = setInterval(function() {
 
-            var now = new Date().getTime();
+<script>
+    var countDownDate = new Date("Jun 14, 2018 17:00:00").getTime();
 
-            var distance = countDownDate - now;
+    var x = setInterval(function() {
 
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        var now = new Date().getTime();
 
-            document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-                + minutes + "m " + seconds + "s ";
+        var distance = countDownDate - now;
 
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("demo").innerHTML = "EXPIRED";
-            }
-        }, 1000);
-    </script>
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+</script>
 </body>
 </html>
