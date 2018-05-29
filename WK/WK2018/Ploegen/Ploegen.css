@@ -20,10 +20,10 @@ body {
 }
 
 .klass1 {
-    margin-left: 100px;
-    margin-right: 1300px;
-    border: 2px solid black;
+    margin-left: 150px;
     height: 150px;
+    width: 450px;
+    border: 2px solid black;
 }
 
 input {
