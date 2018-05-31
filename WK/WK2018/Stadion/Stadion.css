@@ -1,19 +1,18 @@
-body {
-    margin: 0px;
-    background-color: black;
-
+body{
+    height: 100%;
 }
 
-script {
-    visibility: visible;
+img{
+    width: 300px;
+    height: 100px;
 }
 
-header{
+dialog{
+    display: none;
     position: absolute;
-    text-align: center;
-    width: 30%;
-    margin-left: 35%;
+    top: 250px;
 }
+
 .LogoWK {
     width: 320px;
     height: 80px;
@@ -27,5 +26,8 @@ header{
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     position: relative;
-
+    margin-left: 500px;
+}
+html{
+    height: 100%;
 }

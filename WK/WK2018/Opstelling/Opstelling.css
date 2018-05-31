@@ -22,7 +22,7 @@ body {
 .veld{
     float: right;
     height: 890px;
-    margin-right: 270px;
+
     border-left: 2px dashed black;
     padding-left: 110px;
     margin-bottom: 0px;
@@ -67,7 +67,7 @@ p > img {
 
 .keeper {
     position: absolute;
-    margin-left: 1320px;
+    margin-left: 1020px;
     margin-top: 725px;
 }
 

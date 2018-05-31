@@ -2,28 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Stadion</title>
-    <link rel="stylesheet" href="Stadion.css">
-    <link rel="script" href="stadions.js">
+    <title>Stadions</title>
+    <link href="Stadion.css" rel="stylesheet">
+    <script src="stadions.js"></script>
 </head>
 <body>
 <header>
     <a href="../Home/Home.html"> <img class="LogoWK" src="../Home/logo_wk_2018.png"></a>
 </header>
 
-<div id="googleMap" style="width: 100%; height: 400px;"></div>
-
+<div id="map" style="width:100%;height:calc(100% - 90px) ;background:black"></div>
+<dialog id="dialog"><h3 id="stadionnaam"></h3><figure id="stadionfoto"><img id="foto" src=""></figure><h3 id="locatietitel">Locatie</h3><p id="locatie"></p><h3 id="capaciteittitel">Capaciteit</h3><p id="capaciteit"></p><button id="sluitknop" onclick="sluitDialog()">Sluiten</button></dialog>
 <script>
     function myMap() {
-        let mapOptions = {
-            center: new google.maps.MapTypeId.HYBRID
+        var mapOptions = {
+            center: new google.maps.LatLng(50.938241299999994, 5.347872),
+            zoom: 5,
+            mapTypeId: google.maps.MapTypeId.HYBRID
         }
-        let map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+        var icon = {
+            url: "icon_stadion.png", // url
+            scaledSize: new google.maps.Size(50, 50), // scaled size
+            origin: new google.maps.Point(0,0), // origin
+            anchor: new google.maps.Point(0, 0) // anchor
+        };
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+        for(let s=0;s<stadions.length;s++){
+            let stadion = stadions[s];
+            let stadionLocatie = new google.maps.LatLng(stadion.lat,stadion.long);
+            var Marker = new google.maps.Marker({
+                position: stadionLocatie,
+                icon: icon,
+                map: map
+            });
+            Marker.addListener("click", function() {
+                showDialog(stadion);
+            });
+        }
+    }
+    function showDialog(stadion) {
+        document.getElementById("stadionnaam").innerHTML = stadion.name;
+        document.getElementById("foto").src= stadion.img;
+        document.getElementById("locatie").innerHTML = stadion.city;
+        document.getElementById("capaciteit").innerHTML = stadion.cap;
+        document.getElementById("dialog").style.display = "block";
+    }
+    function sluitDialog() {
+        document.getElementById("dialog").style.display = "none";
     }
 </script>
-<script
-        src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap">
-</script>
 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvttpZp7oNA1QSeCHq9OJ23xHOMzJJcNo&callback=myMap"></script>
 </body>
-</html>
+</html></html>
